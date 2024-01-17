@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake with JavaScript</title>
+    <style>
+        body {
+            width: 95vw;
+            height: 95vh;
+            display: grid;
+            place-items: center;
+            background-color: black;
+            color: rgb(255, 230, 0);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        #lienzo {
+            box-shadow: 0px 0px 10px yellow;
+        }
+        h1 {
+            text-align: center;
+        }
+        .btn{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            color: white;
+            background-color: blueviolet;
+            border: solid blue;
+        }
+        .container{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+        }
+        .left, .rigth{
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <button class="btn">Up</button>
+            <button class="btn">Down</button>
+        </div>
+
+        <div class="center">
+            <h1>Snake con JavaScript</h1>
+            <canvas id="lienzo" width="500" height="340"></canvas>
+        </div>
+
+        <div class="rigth">
+            <button class="btn">Left</button>
+            <button class="btn">Right</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
