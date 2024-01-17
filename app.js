@@ -8,8 +8,8 @@ ctx.fillRect(50,30,20,20);
 
 
 function init(){
-let posX =0;
-let posY =0;
+let posX =2;
+let posY =1;
 let direction = 1;
 bgSound.play();
     
@@ -48,8 +48,10 @@ snake.push({
 return snake;
 }
 
-const bgSound= new Audio ('/Fondo.mp3');
-const eating = new Audio('/coin.mp3');
+const bgSound= new Audio ('./audios/Fondo.mp3');
+const eating = new Audio('./audios/coin.mp3');
+const dead = new Audio ('./audios/dead.mp3')
+
 let snake = init();
 
 function nextMove(){
@@ -92,6 +94,7 @@ function checkEat(){
 function gameOver(){
     for(let i=1; i< snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+            dead.play();
             return true;
         }
     }
@@ -108,6 +111,7 @@ setInterval(()=> {
     checkEat();
     if (gameOver()){
         alert('¡Perdiste!')
+        snake = init();
     }
 
     if (direction ==1) posX++;
