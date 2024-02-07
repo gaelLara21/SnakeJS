@@ -48,9 +48,9 @@ snake.push({
 return snake;
 }
 
-const bgSound= new Audio ('./audios/Fondo.mp3');
-const eating = new Audio('./audios/coin.mp3');
-const dead = new Audio ('./audios/dead.mp3')
+const bgSound= new Audio ('./Fondo.mp3');
+const eating = new Audio('./coin.mp3');
+const dead = new Audio ('./dead.mp3')
 
 let snake = init();
 
