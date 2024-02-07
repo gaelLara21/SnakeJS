@@ -48,7 +48,7 @@ snake.push({
 return snake;
 }
 
-const bgSound= new Audio ('./Fondo.mp3');
+const bgSound= new Audio ('./Culebritica.mp3');
 const eating = new Audio('./coin.mp3');
 const dead = new Audio ('./dead.mp3')
 
